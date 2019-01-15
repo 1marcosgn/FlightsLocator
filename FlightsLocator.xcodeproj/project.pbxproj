@@ -12,7 +12,22 @@
 		7FA5427121EE78D600A2A2D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5426F21EE78D600A2A2D9 /* Main.storyboard */; };
 		7FA5427321EE78D700A2A2D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5427221EE78D700A2A2D9 /* Assets.xcassets */; };
 		7FA5427621EE78D700A2A2D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5427421EE78D700A2A2D9 /* LaunchScreen.storyboard */; };
-		7FA5428121EE78D800A2A2D9 /* FlightsLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5428021EE78D800A2A2D9 /* FlightsLocatorTests.swift */; };
+		7FA5428D21EE7ACE00A2A2D9 /* FlightInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5428C21EE7ACE00A2A2D9 /* FlightInformationProtocol.swift */; };
+		7FA5428E21EE7ACE00A2A2D9 /* FlightInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5428C21EE7ACE00A2A2D9 /* FlightInformationProtocol.swift */; };
+		7FA5429021EE7BBB00A2A2D9 /* FlightInformationProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5428F21EE7BBB00A2A2D9 /* FlightInformationProtocolTests.swift */; };
+		7FA5429321EE7D9A00A2A2D9 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5429221EE7D9A00A2A2D9 /* Flight.swift */; };
+		7FA5429421EE7D9A00A2A2D9 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5429221EE7D9A00A2A2D9 /* Flight.swift */; };
+		7FA5429621EE7E9B00A2A2D9 /* FlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5429521EE7E9B00A2A2D9 /* FlightTests.swift */; };
+		7FA5429921EE803100A2A2D9 /* FlightsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5429821EE803100A2A2D9 /* FlightsFactory.swift */; };
+		7FA5429A21EE803100A2A2D9 /* FlightsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5429821EE803100A2A2D9 /* FlightsFactory.swift */; };
+		7FA5429C21EE810000A2A2D9 /* FlightsFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5429B21EE810000A2A2D9 /* FlightsFactoryTests.swift */; };
+		7FA5429E21EE832400A2A2D9 /* ServicesImplementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5429D21EE832400A2A2D9 /* ServicesImplementer.swift */; };
+		7FA5429F21EE832400A2A2D9 /* ServicesImplementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5429D21EE832400A2A2D9 /* ServicesImplementer.swift */; };
+		7FA542A221EE869300A2A2D9 /* ServicesImplementerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542A121EE869300A2A2D9 /* ServicesImplementerTests.swift */; };
+		7FA542A621EE8EB600A2A2D9 /* TimeConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FA542A521EE8EB600A2A2D9 /* TimeConfiguration.plist */; };
+		7FA542A721EE8EB600A2A2D9 /* TimeConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FA542A521EE8EB600A2A2D9 /* TimeConfiguration.plist */; };
+		7FA542A921EE8F7100A2A2D9 /* TimeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542A821EE8F7100A2A2D9 /* TimeConfiguration.swift */; };
+		7FA542AA21EE8F7100A2A2D9 /* TimeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542A821EE8F7100A2A2D9 /* TimeConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +49,17 @@
 		7FA5427521EE78D700A2A2D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FA5427721EE78D700A2A2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FA5427C21EE78D800A2A2D9 /* FlightsLocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightsLocatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FA5428021EE78D800A2A2D9 /* FlightsLocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLocatorTests.swift; sourceTree = "<group>"; };
 		7FA5428221EE78D800A2A2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FA5428C21EE7ACE00A2A2D9 /* FlightInformationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInformationProtocol.swift; sourceTree = "<group>"; };
+		7FA5428F21EE7BBB00A2A2D9 /* FlightInformationProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInformationProtocolTests.swift; sourceTree = "<group>"; };
+		7FA5429221EE7D9A00A2A2D9 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		7FA5429521EE7E9B00A2A2D9 /* FlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTests.swift; sourceTree = "<group>"; };
+		7FA5429821EE803100A2A2D9 /* FlightsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsFactory.swift; sourceTree = "<group>"; };
+		7FA5429B21EE810000A2A2D9 /* FlightsFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsFactoryTests.swift; sourceTree = "<group>"; };
+		7FA5429D21EE832400A2A2D9 /* ServicesImplementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesImplementer.swift; sourceTree = "<group>"; };
+		7FA542A121EE869300A2A2D9 /* ServicesImplementerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesImplementerTests.swift; sourceTree = "<group>"; };
+		7FA542A521EE8EB600A2A2D9 /* TimeConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TimeConfiguration.plist; sourceTree = "<group>"; };
+		7FA542A821EE8F7100A2A2D9 /* TimeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +101,12 @@
 		7FA5426A21EE78D600A2A2D9 /* FlightsLocator */ = {
 			isa = PBXGroup;
 			children = (
+				7FA542A421EE8E9700A2A2D9 /* Configuration */,
+				7FA542A321EE8E8E00A2A2D9 /* Utilities */,
+				7FA542A021EE832900A2A2D9 /* Services */,
+				7FA5429721EE801900A2A2D9 /* Creational */,
+				7FA5429121EE7D6500A2A2D9 /* Models */,
+				7FA5428B21EE7AB000A2A2D9 /* Protocols */,
 				7FA5426B21EE78D600A2A2D9 /* AppDelegate.swift */,
 				7FA5426D21EE78D600A2A2D9 /* ViewController.swift */,
 				7FA5426F21EE78D600A2A2D9 /* Main.storyboard */,
@@ -90,10 +120,61 @@
 		7FA5427F21EE78D800A2A2D9 /* FlightsLocatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				7FA5428021EE78D800A2A2D9 /* FlightsLocatorTests.swift */,
 				7FA5428221EE78D800A2A2D9 /* Info.plist */,
+				7FA5428F21EE7BBB00A2A2D9 /* FlightInformationProtocolTests.swift */,
+				7FA5429521EE7E9B00A2A2D9 /* FlightTests.swift */,
+				7FA5429B21EE810000A2A2D9 /* FlightsFactoryTests.swift */,
+				7FA542A121EE869300A2A2D9 /* ServicesImplementerTests.swift */,
 			);
 			path = FlightsLocatorTests;
+			sourceTree = "<group>";
+		};
+		7FA5428B21EE7AB000A2A2D9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7FA5428C21EE7ACE00A2A2D9 /* FlightInformationProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7FA5429121EE7D6500A2A2D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FA5429221EE7D9A00A2A2D9 /* Flight.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7FA5429721EE801900A2A2D9 /* Creational */ = {
+			isa = PBXGroup;
+			children = (
+				7FA5429821EE803100A2A2D9 /* FlightsFactory.swift */,
+			);
+			path = Creational;
+			sourceTree = "<group>";
+		};
+		7FA542A021EE832900A2A2D9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7FA5429D21EE832400A2A2D9 /* ServicesImplementer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7FA542A321EE8E8E00A2A2D9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7FA542A821EE8F7100A2A2D9 /* TimeConfiguration.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7FA542A421EE8E9700A2A2D9 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				7FA542A521EE8EB600A2A2D9 /* TimeConfiguration.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA542A621EE8EB600A2A2D9 /* TimeConfiguration.plist in Resources */,
 				7FA5427621EE78D700A2A2D9 /* LaunchScreen.storyboard in Resources */,
 				7FA5427321EE78D700A2A2D9 /* Assets.xcassets in Resources */,
 				7FA5427121EE78D600A2A2D9 /* Main.storyboard in Resources */,
@@ -187,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA542A721EE8EB600A2A2D9 /* TimeConfiguration.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA5429E21EE832400A2A2D9 /* ServicesImplementer.swift in Sources */,
+				7FA542A921EE8F7100A2A2D9 /* TimeConfiguration.swift in Sources */,
+				7FA5428D21EE7ACE00A2A2D9 /* FlightInformationProtocol.swift in Sources */,
+				7FA5429321EE7D9A00A2A2D9 /* Flight.swift in Sources */,
+				7FA5429921EE803100A2A2D9 /* FlightsFactory.swift in Sources */,
 				7FA5426E21EE78D600A2A2D9 /* ViewController.swift in Sources */,
 				7FA5426C21EE78D600A2A2D9 /* AppDelegate.swift in Sources */,
 			);
@@ -206,7 +294,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FA5428121EE78D800A2A2D9 /* FlightsLocatorTests.swift in Sources */,
+				7FA5429C21EE810000A2A2D9 /* FlightsFactoryTests.swift in Sources */,
+				7FA5429421EE7D9A00A2A2D9 /* Flight.swift in Sources */,
+				7FA542A221EE869300A2A2D9 /* ServicesImplementerTests.swift in Sources */,
+				7FA5429F21EE832400A2A2D9 /* ServicesImplementer.swift in Sources */,
+				7FA542AA21EE8F7100A2A2D9 /* TimeConfiguration.swift in Sources */,
+				7FA5429621EE7E9B00A2A2D9 /* FlightTests.swift in Sources */,
+				7FA5429A21EE803100A2A2D9 /* FlightsFactory.swift in Sources */,
+				7FA5429021EE7BBB00A2A2D9 /* FlightInformationProtocolTests.swift in Sources */,
+				7FA5428E21EE7ACE00A2A2D9 /* FlightInformationProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
