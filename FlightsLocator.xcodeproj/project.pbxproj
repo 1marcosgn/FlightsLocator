@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F882CF421EFC81F00B26476 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F882CF221EFC81F00B26476 /* ErrorView.swift */; };
+		7F882CF521EFC81F00B26476 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F882CF321EFC81F00B26476 /* ErrorView.xib */; };
+		7F882CF621EFC82700B26476 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F882CF221EFC81F00B26476 /* ErrorView.swift */; };
 		7FA5426C21EE78D600A2A2D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5426B21EE78D600A2A2D9 /* AppDelegate.swift */; };
 		7FA5427121EE78D600A2A2D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5426F21EE78D600A2A2D9 /* Main.storyboard */; };
 		7FA5427321EE78D700A2A2D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5427221EE78D700A2A2D9 /* Assets.xcassets */; };
@@ -58,6 +61,7 @@
 		7FA542DC21EF8E4400A2A2D9 /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542DB21EF8E4400A2A2D9 /* StringValidator.swift */; };
 		7FA542DD21EF8E4400A2A2D9 /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542DB21EF8E4400A2A2D9 /* StringValidator.swift */; };
 		7FA542DF21EF8EE000A2A2D9 /* StringValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542DE21EF8EE000A2A2D9 /* StringValidatorTests.swift */; };
+		7FBAC77B21EFDD0200C6B640 /* Solari.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FBAC77A21EFDD0200C6B640 /* Solari.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F882CF221EFC81F00B26476 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		7F882CF321EFC81F00B26476 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		7FA5426821EE78D600A2A2D9 /* FlightsLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightsLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA5426B21EE78D600A2A2D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FA5427021EE78D600A2A2D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 		7FA542D621EEEE3C00A2A2D9 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		7FA542DB21EF8E4400A2A2D9 /* StringValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidator.swift; sourceTree = "<group>"; };
 		7FA542DE21EF8EE000A2A2D9 /* StringValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidatorTests.swift; sourceTree = "<group>"; };
+		7FBAC77A21EFDD0200C6B640 /* Solari.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Solari.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +253,7 @@
 		7FA542BE21EEB88200A2A2D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7FBAC77A21EFDD0200C6B640 /* Solari.ttf */,
 				7FA542BF21EEB89E00A2A2D9 /* MockFlights.json */,
 			);
 			path = Resources;
@@ -254,6 +262,7 @@
 		7FA542C421EEECE900A2A2D9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7F882CF221EFC81F00B26476 /* ErrorView.swift */,
 				7FA542D521EEEE3C00A2A2D9 /* HeaderView.swift */,
 				7FA542CF21EEEDD700A2A2D9 /* FooterView.swift */,
 				7FA542C921EEED5300A2A2D9 /* FlightCell.swift */,
@@ -269,6 +278,7 @@
 				7FA542CA21EEED5300A2A2D9 /* FlightCell.xib */,
 				7FA542D021EEEDD700A2A2D9 /* FooterView.xib */,
 				7FA542D621EEEE3C00A2A2D9 /* HeaderView.xib */,
+				7F882CF321EFC81F00B26476 /* ErrorView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -358,8 +368,10 @@
 				7FA542A621EE8EB600A2A2D9 /* TimeConfiguration.plist in Resources */,
 				7FA5427621EE78D700A2A2D9 /* LaunchScreen.storyboard in Resources */,
 				7FA542D921EEEE3C00A2A2D9 /* HeaderView.xib in Resources */,
+				7FBAC77B21EFDD0200C6B640 /* Solari.ttf in Resources */,
 				7FA542C021EEB89E00A2A2D9 /* MockFlights.json in Resources */,
 				7FA5427321EE78D700A2A2D9 /* Assets.xcassets in Resources */,
+				7F882CF521EFC81F00B26476 /* ErrorView.xib in Resources */,
 				7FA5427121EE78D600A2A2D9 /* Main.storyboard in Resources */,
 				7FA542CD21EEED5300A2A2D9 /* FlightCell.xib in Resources */,
 			);
@@ -399,6 +411,7 @@
 				7FA542DC21EF8E4400A2A2D9 /* StringValidator.swift in Sources */,
 				7FA5426C21EE78D600A2A2D9 /* AppDelegate.swift in Sources */,
 				7FA542D721EEEE3C00A2A2D9 /* HeaderView.swift in Sources */,
+				7F882CF421EFC81F00B26476 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +426,7 @@
 				7FA542C721EEED0B00A2A2D9 /* MainTableViewController.swift in Sources */,
 				7FA542B621EE9E8400A2A2D9 /* LocalInformationProtocol.swift in Sources */,
 				7FA542C321EECDE500A2A2D9 /* TimeConfigurationTests.swift in Sources */,
+				7F882CF621EFC82700B26476 /* ErrorView.swift in Sources */,
 				7FA5429421EE7D9A00A2A2D9 /* Flight.swift in Sources */,
 				7FA542AE21EE938600A2A2D9 /* Interactor.swift in Sources */,
 				7FA542B021EE949400A2A2D9 /* InteractorTests.swift in Sources */,
