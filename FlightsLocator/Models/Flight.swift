@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Flight: FlightInformationProtocol {
+class Flight: Codable, FlightInformationProtocol {
     var number: String
     var originCode: String
     var arrivalTime: String

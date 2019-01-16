@@ -53,5 +53,15 @@ class ServicesImplementerTests: XCTestCase {
         XCTAssertEqual(sut?.minutesBefore, "10", "Minutes should match configuration")
         XCTAssertEqual(sut?.minutesAfter, "60", "Minutes should match configuration")
     }
-
+    
+    func test_fetchDataFromLocalFile_ShouldFetchAvailable_Fllights_From_LocalJSON() {
+        /// Given
+        let sut = ServicesImplementer.init()
+        
+        /// When
+        sut.fetchDataFromLocalFile()
+        
+        /// Then
+        XCTAssertNotNil(sut.flights, "Flights should not be nil")
+    }
 }

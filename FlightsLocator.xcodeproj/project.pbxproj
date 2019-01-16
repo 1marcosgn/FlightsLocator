@@ -28,6 +28,19 @@
 		7FA542A721EE8EB600A2A2D9 /* TimeConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FA542A521EE8EB600A2A2D9 /* TimeConfiguration.plist */; };
 		7FA542A921EE8F7100A2A2D9 /* TimeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542A821EE8F7100A2A2D9 /* TimeConfiguration.swift */; };
 		7FA542AA21EE8F7100A2A2D9 /* TimeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542A821EE8F7100A2A2D9 /* TimeConfiguration.swift */; };
+		7FA542AD21EE938600A2A2D9 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542AC21EE938600A2A2D9 /* Interactor.swift */; };
+		7FA542AE21EE938600A2A2D9 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542AC21EE938600A2A2D9 /* Interactor.swift */; };
+		7FA542B021EE949400A2A2D9 /* InteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542AF21EE949400A2A2D9 /* InteractorTests.swift */; };
+		7FA542B221EE97C100A2A2D9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542B121EE97C100A2A2D9 /* DataManager.swift */; };
+		7FA542B321EE97C100A2A2D9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542B121EE97C100A2A2D9 /* DataManager.swift */; };
+		7FA542B521EE9E8400A2A2D9 /* LocalInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542B421EE9E8400A2A2D9 /* LocalInformationProtocol.swift */; };
+		7FA542B621EE9E8400A2A2D9 /* LocalInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542B421EE9E8400A2A2D9 /* LocalInformationProtocol.swift */; };
+		7FA542B821EE9F6F00A2A2D9 /* LocalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542B721EE9F6F00A2A2D9 /* LocalInformation.swift */; };
+		7FA542B921EE9F6F00A2A2D9 /* LocalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542B721EE9F6F00A2A2D9 /* LocalInformation.swift */; };
+		7FA542BB21EE9F8300A2A2D9 /* LocalInformationProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542BA21EE9F8300A2A2D9 /* LocalInformationProtocolTests.swift */; };
+		7FA542BD21EEA3A900A2A2D9 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542BC21EEA3A900A2A2D9 /* DataManagerTests.swift */; };
+		7FA542C021EEB89E00A2A2D9 /* MockFlights.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FA542BF21EEB89E00A2A2D9 /* MockFlights.json */; };
+		7FA542C121EEB89E00A2A2D9 /* MockFlights.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FA542BF21EEB89E00A2A2D9 /* MockFlights.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +73,14 @@
 		7FA542A121EE869300A2A2D9 /* ServicesImplementerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesImplementerTests.swift; sourceTree = "<group>"; };
 		7FA542A521EE8EB600A2A2D9 /* TimeConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TimeConfiguration.plist; sourceTree = "<group>"; };
 		7FA542A821EE8F7100A2A2D9 /* TimeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConfiguration.swift; sourceTree = "<group>"; };
+		7FA542AC21EE938600A2A2D9 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		7FA542AF21EE949400A2A2D9 /* InteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTests.swift; sourceTree = "<group>"; };
+		7FA542B121EE97C100A2A2D9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		7FA542B421EE9E8400A2A2D9 /* LocalInformationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInformationProtocol.swift; sourceTree = "<group>"; };
+		7FA542B721EE9F6F00A2A2D9 /* LocalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInformation.swift; sourceTree = "<group>"; };
+		7FA542BA21EE9F8300A2A2D9 /* LocalInformationProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInformationProtocolTests.swift; sourceTree = "<group>"; };
+		7FA542BC21EEA3A900A2A2D9 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		7FA542BF21EEB89E00A2A2D9 /* MockFlights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockFlights.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +122,8 @@
 		7FA5426A21EE78D600A2A2D9 /* FlightsLocator */ = {
 			isa = PBXGroup;
 			children = (
+				7FA542BE21EEB88200A2A2D9 /* Resources */,
+				7FA542AB21EE936900A2A2D9 /* Interactors */,
 				7FA542A421EE8E9700A2A2D9 /* Configuration */,
 				7FA542A321EE8E8E00A2A2D9 /* Utilities */,
 				7FA542A021EE832900A2A2D9 /* Services */,
@@ -125,6 +148,9 @@
 				7FA5429521EE7E9B00A2A2D9 /* FlightTests.swift */,
 				7FA5429B21EE810000A2A2D9 /* FlightsFactoryTests.swift */,
 				7FA542A121EE869300A2A2D9 /* ServicesImplementerTests.swift */,
+				7FA542AF21EE949400A2A2D9 /* InteractorTests.swift */,
+				7FA542BA21EE9F8300A2A2D9 /* LocalInformationProtocolTests.swift */,
+				7FA542BC21EEA3A900A2A2D9 /* DataManagerTests.swift */,
 			);
 			path = FlightsLocatorTests;
 			sourceTree = "<group>";
@@ -133,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				7FA5428C21EE7ACE00A2A2D9 /* FlightInformationProtocol.swift */,
+				7FA542B421EE9E8400A2A2D9 /* LocalInformationProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -165,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				7FA542A821EE8F7100A2A2D9 /* TimeConfiguration.swift */,
+				7FA542B121EE97C100A2A2D9 /* DataManager.swift */,
+				7FA542B721EE9F6F00A2A2D9 /* LocalInformation.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -175,6 +204,22 @@
 				7FA542A521EE8EB600A2A2D9 /* TimeConfiguration.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		7FA542AB21EE936900A2A2D9 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				7FA542AC21EE938600A2A2D9 /* Interactor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		7FA542BE21EEB88200A2A2D9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7FA542BF21EEB89E00A2A2D9 /* MockFlights.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +305,7 @@
 			files = (
 				7FA542A621EE8EB600A2A2D9 /* TimeConfiguration.plist in Resources */,
 				7FA5427621EE78D700A2A2D9 /* LaunchScreen.storyboard in Resources */,
+				7FA542C021EEB89E00A2A2D9 /* MockFlights.json in Resources */,
 				7FA5427321EE78D700A2A2D9 /* Assets.xcassets in Resources */,
 				7FA5427121EE78D600A2A2D9 /* Main.storyboard in Resources */,
 			);
@@ -270,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FA542A721EE8EB600A2A2D9 /* TimeConfiguration.plist in Resources */,
+				7FA542C121EEB89E00A2A2D9 /* MockFlights.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,10 +329,14 @@
 			files = (
 				7FA5429E21EE832400A2A2D9 /* ServicesImplementer.swift in Sources */,
 				7FA542A921EE8F7100A2A2D9 /* TimeConfiguration.swift in Sources */,
+				7FA542B821EE9F6F00A2A2D9 /* LocalInformation.swift in Sources */,
 				7FA5428D21EE7ACE00A2A2D9 /* FlightInformationProtocol.swift in Sources */,
 				7FA5429321EE7D9A00A2A2D9 /* Flight.swift in Sources */,
 				7FA5429921EE803100A2A2D9 /* FlightsFactory.swift in Sources */,
 				7FA5426E21EE78D600A2A2D9 /* ViewController.swift in Sources */,
+				7FA542AD21EE938600A2A2D9 /* Interactor.swift in Sources */,
+				7FA542B221EE97C100A2A2D9 /* DataManager.swift in Sources */,
+				7FA542B521EE9E8400A2A2D9 /* LocalInformationProtocol.swift in Sources */,
 				7FA5426C21EE78D600A2A2D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,9 +345,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA542B921EE9F6F00A2A2D9 /* LocalInformation.swift in Sources */,
+				7FA542BB21EE9F8300A2A2D9 /* LocalInformationProtocolTests.swift in Sources */,
 				7FA5429C21EE810000A2A2D9 /* FlightsFactoryTests.swift in Sources */,
+				7FA542B321EE97C100A2A2D9 /* DataManager.swift in Sources */,
+				7FA542B621EE9E8400A2A2D9 /* LocalInformationProtocol.swift in Sources */,
 				7FA5429421EE7D9A00A2A2D9 /* Flight.swift in Sources */,
+				7FA542AE21EE938600A2A2D9 /* Interactor.swift in Sources */,
+				7FA542B021EE949400A2A2D9 /* InteractorTests.swift in Sources */,
 				7FA542A221EE869300A2A2D9 /* ServicesImplementerTests.swift in Sources */,
+				7FA542BD21EEA3A900A2A2D9 /* DataManagerTests.swift in Sources */,
 				7FA5429F21EE832400A2A2D9 /* ServicesImplementer.swift in Sources */,
 				7FA542AA21EE8F7100A2A2D9 /* TimeConfiguration.swift in Sources */,
 				7FA5429621EE7E9B00A2A2D9 /* FlightTests.swift in Sources */,

@@ -62,6 +62,8 @@ internal extension ServicesImplementer {
             request.httpMethod = "GET"
             request.addValue(Services.request_value, forHTTPHeaderField: Services.request_key)
             
+            // TODO: UNCOMMENT THIS SECTION --- THE API IS NOT RESPONDING ---
+            /*
             let dataTask = session.dataTask(with: request as URLRequest) {
                 ( data, response, error) in
                 if let httpResponse = response as? HTTPURLResponse {
@@ -86,6 +88,12 @@ internal extension ServicesImplementer {
                 }
             }
             dataTask.resume()
+ */
+            // TODO: REMOVE THIS TEMPORARY CODE ADDED DUE AN ISSUE WITH THE API
+            //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            self.fetchDataFromLocalFile()
+            completion(true)
+            //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         }
     }
     
@@ -117,5 +125,21 @@ internal extension ServicesImplementer {
         
         return TimeConfiguration(minutesBefore: minutesBefore, minutesAfter: minutesAfter)
     }
-    
+}
+
+/// Extension to get the information from a local file  -- For testing --
+internal extension ServicesImplementer {
+    func fetchDataFromLocalFile() {
+        if let path = Bundle.main.path(forResource: "MockFlights", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? [[String: Any]] {
+                    self.setUpFlightsArrayWith(jsonResult)
+                }
+            } catch {
+                print("Error fetching the local file")
+            }
+        }
+    }
 }
