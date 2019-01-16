@@ -62,8 +62,6 @@ internal extension ServicesImplementer {
             request.httpMethod = "GET"
             request.addValue(Services.request_value, forHTTPHeaderField: Services.request_key)
             
-            // TODO: UNCOMMENT THIS SECTION --- THE API IS NOT RESPONDING ---
-            /*
             let dataTask = session.dataTask(with: request as URLRequest) {
                 ( data, response, error) in
                 if let httpResponse = response as? HTTPURLResponse {
@@ -88,11 +86,11 @@ internal extension ServicesImplementer {
                 }
             }
             dataTask.resume()
- */
+
             // TODO: REMOVE THIS TEMPORARY CODE ADDED DUE AN ISSUE WITH THE API
             //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-            self.fetchDataFromLocalFile()
-            completion(true)
+//            self.fetchDataFromLocalFile()
+//            completion(true)
             //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         }
     }

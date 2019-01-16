@@ -21,10 +21,14 @@ class Interactor {
         guard let localInfo = manager.retrieveData() else {
             return nil
         }
+       
+        /// Before returning the local stored information we shoul compare Current Date agains Stored Date
+        let timeDifference = TimeConfiguration.getTimeDifferenceInMinutesBetween(dateA: localInfo.time, dateB: Date())
         
-        // TODO:
-        // BEFORE RETURN THE INFORMATION.. COMPARE 'localInfo.time' AGAINST THE CURRENT DATE 'Date()' TO VALIDATE THE DIFERENCE BETWEEN THEM IS SMALLER THAN 10 MIN, IF NOT .. RETURN NIL, THAT SHOULD FORCE THE APP TO RETRIEVE FRESH DATA WITH 'requestFlightsFor' USING 'localInfo.airportCode'
-        
+        /// Only fetch updated information if the current locally stored information is older than 10 minutes
+        if timeDifference > 10 {
+            return nil
+        }
         
         return localInfo
     }

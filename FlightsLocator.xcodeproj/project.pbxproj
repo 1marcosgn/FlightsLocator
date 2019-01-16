@@ -41,6 +41,7 @@
 		7FA542BD21EEA3A900A2A2D9 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542BC21EEA3A900A2A2D9 /* DataManagerTests.swift */; };
 		7FA542C021EEB89E00A2A2D9 /* MockFlights.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FA542BF21EEB89E00A2A2D9 /* MockFlights.json */; };
 		7FA542C121EEB89E00A2A2D9 /* MockFlights.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FA542BF21EEB89E00A2A2D9 /* MockFlights.json */; };
+		7FA542C321EECDE500A2A2D9 /* TimeConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA542C221EECDE500A2A2D9 /* TimeConfigurationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		7FA542BA21EE9F8300A2A2D9 /* LocalInformationProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInformationProtocolTests.swift; sourceTree = "<group>"; };
 		7FA542BC21EEA3A900A2A2D9 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		7FA542BF21EEB89E00A2A2D9 /* MockFlights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockFlights.json; sourceTree = "<group>"; };
+		7FA542C221EECDE500A2A2D9 /* TimeConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConfigurationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				7FA542AF21EE949400A2A2D9 /* InteractorTests.swift */,
 				7FA542BA21EE9F8300A2A2D9 /* LocalInformationProtocolTests.swift */,
 				7FA542BC21EEA3A900A2A2D9 /* DataManagerTests.swift */,
+				7FA542C221EECDE500A2A2D9 /* TimeConfigurationTests.swift */,
 			);
 			path = FlightsLocatorTests;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				7FA5429C21EE810000A2A2D9 /* FlightsFactoryTests.swift in Sources */,
 				7FA542B321EE97C100A2A2D9 /* DataManager.swift in Sources */,
 				7FA542B621EE9E8400A2A2D9 /* LocalInformationProtocol.swift in Sources */,
+				7FA542C321EECDE500A2A2D9 /* TimeConfigurationTests.swift in Sources */,
 				7FA5429421EE7D9A00A2A2D9 /* Flight.swift in Sources */,
 				7FA542AE21EE938600A2A2D9 /* Interactor.swift in Sources */,
 				7FA542B021EE949400A2A2D9 /* InteractorTests.swift in Sources */,

@@ -14,7 +14,7 @@ class FlightInformationProtocolTests: XCTestCase {
         /// Given
         let mockFlight = "1259"
         let mockOrigin = "SFO"
-        let mockArrival = "2019-01-15T10:25:00"
+        let mockArrival = TimeConfiguration.getDateFrom("2019-01-15T10:25:00")
         
         /// When
         let sut = MockFlight(number: mockFlight, originCode: mockOrigin, arrivalTime: mockArrival)
@@ -34,9 +34,9 @@ class FlightInformationProtocolTests: XCTestCase {
 class MockFlight: FlightInformationProtocol {
     var number: String
     var originCode: String
-    var arrivalTime: String
+    var arrivalTime: Date?
     
-    init(number: String, originCode: String, arrivalTime: String) {
+    init(number: String, originCode: String, arrivalTime: Date?) {
         self.number = number
         self.originCode = originCode
         self.arrivalTime = arrivalTime

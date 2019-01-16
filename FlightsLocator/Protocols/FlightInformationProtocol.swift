@@ -17,5 +17,5 @@ public protocol FlightInformationProtocol {
     var originCode: String { get set }
     
     /// arrival time of the flight, in local time for the user.
-    var arrivalTime: String { get set}
+    var arrivalTime: Date? { get set}
 }

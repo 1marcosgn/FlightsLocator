@@ -29,6 +29,6 @@ class FlightsFactoryTests: XCTestCase {
         
         XCTAssertEqual(flight?.number, "1259", "Flight number should match")
         XCTAssertEqual(flight?.originCode, "SFO", "Origin Code should match")
-        XCTAssertEqual(flight?.arrivalTime, "2019-01-15T10:25:00", "Arrival Time number should match")
+        XCTAssertEqual(flight?.arrivalTime, TimeConfiguration.getDateFrom("2019-01-15T10:25:00"), "Arrival Time number should match")
     }
 }

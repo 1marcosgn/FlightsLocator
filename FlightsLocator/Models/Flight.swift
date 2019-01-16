@@ -11,11 +11,31 @@ import UIKit
 class Flight: Codable, FlightInformationProtocol {
     var number: String
     var originCode: String
-    var arrivalTime: String
+    var arrivalTime: Date?
     
     init(_ information:[String: Any]) {
         self.number = information["FltId"] as? String ?? ""
         self.originCode = information["Orig"] as? String ?? ""
-        self.arrivalTime = information["SchedArrTime"] as? String ?? ""
+        self.arrivalTime = formatArrivalTime(information)
+    }
+    
+    /// Initializer for testing
+    init(number: String, originCode: String, arrivalTime: Date?) {
+        self.number = number
+        self.originCode = originCode
+        self.arrivalTime = arrivalTime
+    }
+}
+
+/// Extension to Use TimeConfiguration and transfrom the Arrival string into a valid date
+private extension Flight {
+    func formatArrivalTime(_ arrivalTime: [String: Any]) -> Date? {
+        guard let arrival = arrivalTime["SchedArrTime"] as? String else {
+            return nil
+        }
+        guard let validDate = TimeConfiguration.getDateFrom(arrival) else {
+            return nil
+        }
+        return validDate
     }
 }

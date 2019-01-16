@@ -25,7 +25,7 @@ class FlightTests: XCTestCase {
         
         XCTAssertEqual(sut.number, "1259", "Flight number should match")
         XCTAssertEqual(sut.originCode, "SFO", "Origin Code should match")
-        XCTAssertEqual(sut.arrivalTime, "2019-01-15T10:25:00", "Arrival Time number should match")
+        XCTAssertEqual(sut.arrivalTime, TimeConfiguration.getDateFrom("2019-01-15T10:25:00"), "Arrival Time number should match")
     }
 }
 
