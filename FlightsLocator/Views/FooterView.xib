@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FooterView" customModule="FlightsLocator" customModuleProvider="target">
             <connections>
+                <outlet property="statusLabel" destination="evt-zi-TFP" id="P2e-Wq-Ram"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,21 @@
         <view clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Updated: 03:41 CST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evt-zi-TFP">
+                    <rect key="frame" x="20" y="12" width="335" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="0.17640846967697144" green="0.16867920756340027" blue="0.16470703482627869" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="evt-zi-TFP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Wif-DK-waf"/>
+                <constraint firstItem="evt-zi-TFP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wvu-ea-6xy"/>
+                <constraint firstItem="evt-zi-TFP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dst-ye-EGN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="evt-zi-TFP" secondAttribute="trailing" constant="20" id="zMU-hH-JIR"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -53,6 +53,11 @@ extension TimeConfiguration {
         return dateString
     }
     
+    /// Return the local time code
+    class func getLocalTime() -> String {
+        return TimeZone.current.abbreviation() ?? ""
+    }
+    
     /// Returns an array of Flights sorted based on the arrival date with soonest at the top
     class func orderBasedOnDate(_ elements:[Flight]) -> [Flight] {
         //Create an array of the `Dates` for each Flight Object

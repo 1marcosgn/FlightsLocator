@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum ActivityStatus {
+    case start
+    case stop
+}
+
 class MainTableViewController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
@@ -15,7 +20,12 @@ class MainTableViewController: UITableViewController {
     
     /// Array to manage the available flights
     var flights = [Flight]()
+    
+    /// To handle the logic of the app
     let interactor = Interactor.init()
+    
+    /// To work with the stored information
+    var savedInformation: LocalInformation? = nil
     
     // UI ELEMENTS
     override func viewDidLoad() {
@@ -24,7 +34,6 @@ class MainTableViewController: UITableViewController {
         loadInitialTableInformation()
         setUpSearchController()
     }
-
 }
 
 
@@ -37,10 +46,19 @@ extension MainTableViewController {
         tableView.separatorStyle = .none //remove separator .. the ui design will be handled in the cell
         tableView.backgroundColor = .gray
         tableView.backgroundView = errorView.view
+        updateErrorScreen(errorMessage: "")
+    }
+    
+    /// Updates the error/status string and the activity indicator
+    func updateErrorScreen(errorMessage: String, _ activityStatus: ActivityStatus? = nil) {
+        errorView.statusMessage.text = errorMessage
         
-        errorView.activityIndicator.isHidden = true
-        errorView.statusMessage.text = ""
-        errorView.activityIndicator.hidesWhenStopped = true
+        if activityStatus == .stop {
+            errorView.activityIndicator.stopAnimating()
+        } else if activityStatus == .start {
+            errorView.activityIndicator.isHidden = false
+            errorView.activityIndicator.startAnimating()
+        }
     }
 }
 
@@ -58,11 +76,12 @@ extension MainTableViewController {
         if localInformation != nil {
             
             if localInformation?.flights.count == 0 {
-                errorView.activityIndicator.stopAnimating()
-                errorView.statusMessage.text = "You haven't Search for any Airport Pull Down the Screen to Search"
+                updateErrorScreen(errorMessage: "You haven't Search for any Airport Pull Down the Screen to Search", .stop)
                 self.title = ""
                 return
             }
+            
+            savedInformation = localInformation
             
             // validate the local information time and compare it to see if it is valid information (no older than 10 minutes)
             guard let storedTime = localInformation?.time else {
@@ -78,8 +97,7 @@ extension MainTableViewController {
                     return
                 }
                 
-                errorView.activityIndicator.isHidden = false
-                errorView.activityIndicator.startAnimating()
+                updateErrorScreen(errorMessage: "", .start)
                 
                 interactor.requestFlightsFor(airportCode) { (success) in
                     if success {
@@ -91,22 +109,19 @@ extension MainTableViewController {
                         DispatchQueue.main.async { [unowned self] in
                             self.title = localInformation?.airportCode
                             self.tableView.reloadData()
-                            self.errorView.activityIndicator.stopAnimating()
-                            self.errorView.statusMessage.text = ""
+                            self.updateErrorScreen(errorMessage: "", .stop)
                         }
                     } else {
                         DispatchQueue.main.async { [unowned self] in
                             self.title = airportCode
                             self.flights = [Flight]()
                             self.tableView.reloadData()
-                            self.errorView.statusMessage.text = "We were not able to fetch information for " + airportCode + " at this moment"
-                            self.errorView.activityIndicator.stopAnimating()
+                            self.updateErrorScreen(errorMessage: "We were not able to fetch information for " + airportCode + " at this moment", .stop)
                         }
                     }
                 }
             } else {
                 // if the information is younger than 10 minutes then use that information to fill the sear bar with the 'airportCode' and the 'flights' with local 'flights'
-                
                 guard let storedFlights = localInformation?.flights else {
                     return
                 }
@@ -117,7 +132,7 @@ extension MainTableViewController {
             }
         } else {
             // if No local information is available at all then display a message indication that In order to see information in the table, the user needs to enter a 3 character search in the search bar
-            errorView.statusMessage.text = "You haven't Search for any Airport Pull Down the Screen to Search"
+            updateErrorScreen(errorMessage: "You haven't Search for any Airport Pull Down the Screen to Search")
         }
     }
     
@@ -133,9 +148,8 @@ extension MainTableViewController {
         guard let airportCode = airport else {
             return
         }
-        
-        errorView.activityIndicator.isHidden = false
-        errorView.activityIndicator.startAnimating()
+
+        updateErrorScreen(errorMessage: "", .start)
         
         interactor.requestFlightsFor(airportCode) { (success) in
             if success {
@@ -148,17 +162,18 @@ extension MainTableViewController {
                 
                 if self.flights.count == 0 {
                     DispatchQueue.main.async { [unowned self] in
-                        self.errorView.activityIndicator.stopAnimating()
-                        self.errorView.statusMessage.text = "We are not able to fetch information for " + airportCode + " at this moment"
+                        self.updateErrorScreen(errorMessage: "We were not able to fetch information for " + airportCode + " at this moment", .stop)
                         self.title = ""
                     }
                 } else {
                     
                     DispatchQueue.main.async { [unowned self] in
                         self.title = airportCode
+                        self.savedInformation = LocalInformation(airportCode: airportCode, flights: self.flights, time: Date())
                         self.tableView.reloadData()
-                        self.errorView.activityIndicator.stopAnimating()
-                        self.errorView.statusMessage.text = ""
+                        self.updateErrorScreen(errorMessage: "", .stop)
+                        
+                        
                     }
                 }
             } else {
@@ -166,8 +181,7 @@ extension MainTableViewController {
                     self.title = airportCode
                     self.flights = [Flight]()
                     self.tableView.reloadData()
-                    self.errorView.statusMessage.text = "We were not able to fetch information for " + airportCode + " at this moment"
-                    self.errorView.activityIndicator.stopAnimating()
+                    self.updateErrorScreen(errorMessage: "We were not able to fetch information for " + airportCode + " at this moment", .stop)
                     self.title = ""
                 }
             }
@@ -188,15 +202,12 @@ extension MainTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "flightCell", for: indexPath) as! FlightCell
-        
         let flight = flights[indexPath.item]
         
         // set up cell here
         cell.number.text = flight.number
         cell.origin.text = flight.originCode
         cell.arrival.text = TimeConfiguration.getHMStringFrom(flight.arrivalTime)
-        
-        
         
         return cell
     }
@@ -209,16 +220,32 @@ extension MainTableViewController {
         return 45
     }
     
-//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        return FooterView().view
-//    }
-//
-//    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return 45
-//    }
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if let localInfo = savedInformation {
+            if localInfo.flights.count > 0 {
+                let footer = FooterView.init()
+                footer.status = "Last Updated: " + (TimeConfiguration.getHMStringFrom(localInfo.time) ?? "--") + " " + TimeConfiguration.getLocalTime()
+                return footer.view
+            } else {
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if let localInfo = savedInformation {
+            if localInfo.flights.count > 0 {
+                return 45
+            } else {
+                return 0
+            }
+        } else {
+            return 0
+        }
+    }
 }
-
-
 
 // MARK: - Extension to manage Search Bar
 extension MainTableViewController: UISearchBarDelegate {
