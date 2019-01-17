@@ -9,22 +9,32 @@
 import UIKit
 
 class FooterView: UIViewController {
-
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.statusLabel.text = status
+        
     }
+        
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var status: String?
+    
+    // this is a convenient way to create this view controller without a imageURL
+    convenience init() {
+        self.init(status: nil)
     }
-    */
+    
+    init(status: String?) {
+        self.status = status
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
 }
