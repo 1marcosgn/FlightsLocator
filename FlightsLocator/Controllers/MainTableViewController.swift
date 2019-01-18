@@ -30,6 +30,16 @@ class MainTableViewController: UITableViewController {
     // UI ELEMENTS
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        setUpAppElements()
+    }
+    
+    // This gets called when the app enters in forground
+    @objc func willEnterForeground() {
+        setUpAppElements()
+    }
+    
+    func setUpAppElements() {
         setUpUIForTableView()
         loadInitialTableInformation()
         setUpSearchController()

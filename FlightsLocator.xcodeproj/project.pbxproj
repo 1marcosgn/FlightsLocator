@@ -202,6 +202,7 @@
 		7FA5429121EE7D6500A2A2D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7FA542B721EE9F6F00A2A2D9 /* LocalInformation.swift */,
 				7FA5429221EE7D9A00A2A2D9 /* Flight.swift */,
 			);
 			path = Models;
@@ -228,7 +229,6 @@
 			children = (
 				7FA542A821EE8F7100A2A2D9 /* TimeConfiguration.swift */,
 				7FA542B121EE97C100A2A2D9 /* DataManager.swift */,
-				7FA542B721EE9F6F00A2A2D9 /* LocalInformation.swift */,
 				7FA542DB21EF8E4400A2A2D9 /* StringValidator.swift */,
 			);
 			path = Utilities;
