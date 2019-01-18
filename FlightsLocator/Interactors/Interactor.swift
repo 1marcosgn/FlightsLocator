@@ -21,17 +21,6 @@ class Interactor {
         guard let localInfo = manager.retrieveData() else {
             return nil
         }
-       
-        //TODO: REMOVE THIS .. THIS WON'T BE DECIDED HERE.. MAYBE IN THE TABLE CONTROLLER
-        /*
-        /// Before returning the local stored information we shoul compare Current Date agains Stored Date
-        let timeDifference = TimeConfiguration.getTimeDifferenceInMinutesBetween(dateA: localInfo.time, dateB: Date())
-        
-        /// Only fetch updated information if the current locally stored information is older than 10 minutes
-        if timeDifference > 10 {
-            return nil
-        }
-        */
         
         return localInfo
     }
